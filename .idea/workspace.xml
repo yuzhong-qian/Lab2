@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c6a2ab4-cb3e-42c0-9893-59823aff4333" name="Default" comment="" />
+    <list default="true" id="8c6a2ab4-cb3e-42c0-9893-59823aff4333" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Feedback.form" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Feedback.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DatabaeLab2/Reviewer$1.class" afterPath="$PROJECT_DIR$/out/production/DatabaeLab2/Reviewer$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DatabaeLab2/Reviewer$2.class" afterPath="$PROJECT_DIR$/out/production/DatabaeLab2/Reviewer$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DatabaeLab2/Reviewer$3.class" afterPath="$PROJECT_DIR$/out/production/DatabaeLab2/Reviewer$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DatabaeLab2/Reviewer$4.class" afterPath="$PROJECT_DIR$/out/production/DatabaeLab2/Reviewer$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DatabaeLab2/Reviewer$5.class" afterPath="$PROJECT_DIR$/out/production/DatabaeLab2/Reviewer$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DatabaeLab2/Reviewer$6.class" afterPath="$PROJECT_DIR$/out/production/DatabaeLab2/Reviewer$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DatabaeLab2/Reviewer$7.class" afterPath="$PROJECT_DIR$/out/production/DatabaeLab2/Reviewer$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DatabaeLab2/Reviewer$8.class" afterPath="$PROJECT_DIR$/out/production/DatabaeLab2/Reviewer$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DatabaeLab2/Reviewer$9.class" afterPath="$PROJECT_DIR$/out/production/DatabaeLab2/Reviewer$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DatabaeLab2/Reviewer.class" afterPath="$PROJECT_DIR$/out/production/DatabaeLab2/Reviewer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Reviewer.java" afterPath="$PROJECT_DIR$/src/Reviewer.java" />
+    </list>
     <ignored path="DatabaeLab2.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -34,40 +49,71 @@
         <entry file="file://$PROJECT_DIR$/src/Reviewer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="103" column="42" selection-start-line="103" selection-start-column="42" selection-end-line="103" selection-end-column="42" />
+              <caret line="246" column="85" selection-start-line="246" selection-start-column="85" selection-end-line="246" selection-end-column="85" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#6116#6117#0" expanded="true" />
-                <element signature="e#6155#6156#0" expanded="true" />
-                <element signature="e#6429#6430#0" expanded="true" />
-                <element signature="e#6468#6469#0" expanded="true" />
-                <element signature="e#6754#6755#0" expanded="true" />
-                <element signature="e#6793#6794#0" expanded="true" />
-                <element signature="e#7082#7083#0" expanded="true" />
-                <element signature="e#7121#7122#0" expanded="true" />
-                <element signature="e#7440#7441#0" expanded="true" />
-                <element signature="e#7479#7480#0" expanded="true" />
-                <element signature="e#9155#9163#0" expanded="true" />
-                <marker date="1493788532000" expanded="true" signature="1926:1968" placeholder="SELECT * FRO... Reviewer" />
-                <marker date="1493788532000" expanded="true" signature="4650:4967" placeholder="INSERT INTO Feedback... " />
-                <marker date="1493788532000" expanded="true" signature="5069:5107" placeholder="SELECT MAX(`... Feedback" />
-                <marker date="1493788532000" expanded="true" signature="5277:5431" placeholder="UPDATE Assig... " />
+                <marker date="1493827295000" expanded="true" signature="1961:2003" placeholder="SELECT * FRO... Reviewer" />
+                <marker date="1493827295000" expanded="true" signature="4685:5002" placeholder="INSERT INTO Feedback... " />
+                <marker date="1493827295000" expanded="true" signature="5104:5142" placeholder="SELECT MAX(`... Feedback" />
+                <marker date="1493827295000" expanded="true" signature="5312:5466" placeholder="UPDATE Assig... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Feedback.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Feedback.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.72527474">
+              <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1493827371000" expanded="true" signature="3490:3807" placeholder="INSERT INTO Feedback... " />
+                <marker date="1493827371000" expanded="true" signature="3909:3947" placeholder="SELECT MAX(`... Feedback" />
+                <marker date="1493827371000" expanded="true" signature="4117:4261" placeholder="UPDATE Assig... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Login.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Login.form">
+          <provider selected="true" editor-type-id="ui-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Feedback.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Feedback.form">
+          <provider selected="true" editor-type-id="ui-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ButtonColumn.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ButtonColumn.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Assignment.form" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Assignment.form">
-          <provider selected="true" editor-type-id="ui-designer">
-            <state />
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Register.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Register.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-64.703705">
+            <state vertical-scroll-proportion="0.0">
               <caret line="142" column="66" selection-start-line="142" selection-start-column="66" selection-end-line="142" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -87,29 +133,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Reviewer.form" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Reviewer.form">
-          <provider selected="true" editor-type-id="ui-designer">
-            <state />
+      <file leaf-file-name="Login.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Login.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="64" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1493781239000" expanded="true" signature="940:968" placeholder="SELECT inter... RICodes" />
+                <marker date="1493781239000" expanded="true" signature="2521:2571" placeholder="SELECT * FRO... missingValue" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Issue.form" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Issue.form">
-          <provider selected="true" editor-type-id="ui-designer">
-            <state />
+      <file leaf-file-name="Reviewer.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Reviewer.form">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Assignment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Assignment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.9259257">
+            <state vertical-scroll-proportion="0.0">
               <caret line="252" column="45" selection-start-line="252" selection-start-column="33" selection-end-line="252" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#6663#6671#0" expanded="true" />
-                <element signature="e#10932#10940#0" expanded="true" />
                 <marker date="1493787774000" expanded="true" signature="3504:3567" placeholder="SELECT `code... Manuscript" />
                 <marker date="1493787774000" expanded="true" signature="4355:4408" placeholder="SELECT `idRe... InterestList" />
                 <marker date="1493787774000" expanded="true" signature="5240:5335" placeholder="SELECT `idRe... Reviewer" />
@@ -117,54 +171,6 @@
                 <marker date="1493787774000" expanded="true" signature="7798:7870" placeholder="UPDATE Manus... " />
               </folding>
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Issue.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Issue.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.3703704">
-              <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#6793#6801#0" expanded="true" />
-                <marker date="1493788173000" expanded="true" signature="3074:3211" placeholder="UPDATE Issue... " />
-                <marker date="1493788173000" expanded="true" signature="3256:3383" placeholder="SELECT idMan... Typesetting" />
-                <marker date="1493788173000" expanded="true" signature="3950:4018" placeholder="UPDATE Manus... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Editor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Editor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="73" column="44" selection-start-line="73" selection-start-column="44" selection-end-line="73" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#14733#14741#0" expanded="true" />
-                <marker date="1493787949000" expanded="true" signature="2207:2245" placeholder="SELECT * FRO... Editor" />
-                <marker date="1493787949000" expanded="true" signature="4953:5031" placeholder="UPDATE Manus... " />
-                <marker date="1493787949000" expanded="true" signature="5145:5223" placeholder="UPDATE Manus... " />
-                <marker date="1493787949000" expanded="true" signature="5870:5945" placeholder="UPDATE Manus... " />
-                <marker date="1493787949000" expanded="true" signature="5870:5982" placeholder="UPDATE Manus... " />
-                <marker date="1493787949000" expanded="true" signature="6113:6191" placeholder="UPDATE Manus... " />
-                <marker date="1493787949000" expanded="true" signature="6251:6312" placeholder="SELECT `type... Manuscript" />
-                <marker date="1493787949000" expanded="true" signature="6980:7105" placeholder="SELECT MAX(`... Typesetting" />
-                <marker date="1493787949000" expanded="true" signature="8376:8454" placeholder="UPDATE Manus... " />
-                <marker date="1493787949000" expanded="true" signature="10800:10860" placeholder="SELECT `type... Manuscript" />
-                <marker date="1493787949000" expanded="true" signature="10800:10861" placeholder="SELECT `type... Manuscript" />
-                <marker date="1493787949000" expanded="true" signature="11152:11254" placeholder="SELECT `publ... Issue" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Editor.form" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Editor.form">
-          <provider selected="true" editor-type-id="ui-designer">
-            <state />
           </provider>
         </entry>
       </file>
@@ -176,6 +182,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -202,8 +211,10 @@
         <option value="$PROJECT_DIR$/src/Assignment.java" />
         <option value="$PROJECT_DIR$/src/Editor.java" />
         <option value="$PROJECT_DIR$/src/Issue.java" />
-        <option value="$PROJECT_DIR$/src/Reviewer.java" />
         <option value="$PROJECT_DIR$/src/Reviewer.form" />
+        <option value="$PROJECT_DIR$/src/Reviewer.java" />
+        <option value="$PROJECT_DIR$/src/Feedback.java" />
+        <option value="$PROJECT_DIR$/src/Feedback.form" />
       </list>
     </option>
   </component>
@@ -253,6 +264,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -289,10 +301,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Reviewer" />
-              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -308,112 +316,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Register" />
+              <option name="myItemId" value="Feedback" />
               <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DatabaeLab2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DatabaeLab2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Login" />
-              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DatabaeLab2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DatabaeLab2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Issue" />
-              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DatabaeLab2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DatabaeLab2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Editor" />
-              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DatabaeLab2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DatabaeLab2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Author" />
-              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DatabaeLab2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DatabaeLab2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Assignment" />
-              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DatabaeLab2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DatabaeLab2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -421,7 +325,6 @@
       <pane id="Scratches">
         <subPane />
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -439,6 +342,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/lib" />
     </key>
   </component>
@@ -940,16 +844,17 @@
       <updated>1493316985684</updated>
       <workItem from="1493316987808" duration="10219000" />
       <workItem from="1493515860851" duration="9496000" />
-      <workItem from="1493580369717" duration="69911000" />
+      <workItem from="1493580369717" duration="71062000" />
+      <workItem from="1493824630378" duration="2602000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89626000" />
+    <option name="totallyTimeSpent" value="93379000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="26" width="1297" height="812" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -961,10 +866,9 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24940239" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24940239" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24940239" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -976,6 +880,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1000,6 +905,131 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Reviewer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1493827295000" expanded="true" signature="1961:2003" placeholder="SELECT * FRO... Reviewer" />
+            <marker date="1493827295000" expanded="true" signature="4685:5002" placeholder="INSERT INTO Feedback... " />
+            <marker date="1493827295000" expanded="true" signature="5104:5142" placeholder="SELECT MAX(`... Feedback" />
+            <marker date="1493827295000" expanded="true" signature="5312:5466" placeholder="UPDATE Assig... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ButtonColumn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Assignment.form">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Register.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="142" column="66" selection-start-line="142" selection-start-column="66" selection-end-line="142" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1493765821000" expanded="true" signature="1342:1363" placeholder="SELECT inter... RICodes" />
+            <marker date="1493765821000" expanded="true" signature="4395:4464" placeholder="INSERT INTO Editor... " />
+            <marker date="1493765821000" expanded="true" signature="4857:4891" placeholder="SELECT MAX(`... Editor" />
+            <marker date="1493765821000" expanded="true" signature="5427:5524" placeholder="INSERT INTO Author... " />
+            <marker date="1493765821000" expanded="true" signature="5427:5589" placeholder="INSERT INTO Editor... " />
+            <marker date="1493765821000" expanded="true" signature="6232:6260" placeholder="SELECT MAX(`... Editor" />
+            <marker date="1493765821000" expanded="true" signature="6232:6266" placeholder="SELECT MAX(`... Author" />
+            <marker date="1493765821000" expanded="true" signature="6765:6915" placeholder="INSERT INTO Author... " />
+            <marker date="1493765821000" expanded="true" signature="7837:7875" placeholder="SELECT MAX(`... Reviewer" />
+            <marker date="1493765821000" expanded="true" signature="8159:8212" placeholder="INSERT INTO InterestList... " />
+            <marker date="1493765821000" expanded="true" signature="8159:8213" placeholder="INSERT INTO InterestList... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Reviewer.form">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Issue.form">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Assignment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="252" column="45" selection-start-line="252" selection-start-column="33" selection-end-line="252" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1493787774000" expanded="true" signature="3504:3567" placeholder="SELECT `code... Manuscript" />
+            <marker date="1493787774000" expanded="true" signature="4355:4408" placeholder="SELECT `idRe... InterestList" />
+            <marker date="1493787774000" expanded="true" signature="5240:5335" placeholder="SELECT `idRe... Reviewer" />
+            <marker date="1493787774000" expanded="true" signature="7330:7507" placeholder="INSERT INTO Assignment... " />
+            <marker date="1493787774000" expanded="true" signature="7798:7870" placeholder="UPDATE Manus... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Issue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1493788173000" expanded="true" signature="3074:3211" placeholder="UPDATE Issue... " />
+            <marker date="1493788173000" expanded="true" signature="3256:3383" placeholder="SELECT idMan... Typesetting" />
+            <marker date="1493788173000" expanded="true" signature="3950:4018" placeholder="UPDATE Manus... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Editor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="73" column="44" selection-start-line="73" selection-start-column="44" selection-end-line="73" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1493787949000" expanded="true" signature="2207:2245" placeholder="SELECT * FRO... Editor" />
+            <marker date="1493787949000" expanded="true" signature="4953:5031" placeholder="UPDATE Manus... " />
+            <marker date="1493787949000" expanded="true" signature="5145:5223" placeholder="UPDATE Manus... " />
+            <marker date="1493787949000" expanded="true" signature="5870:5945" placeholder="UPDATE Manus... " />
+            <marker date="1493787949000" expanded="true" signature="5870:5982" placeholder="UPDATE Manus... " />
+            <marker date="1493787949000" expanded="true" signature="6113:6191" placeholder="UPDATE Manus... " />
+            <marker date="1493787949000" expanded="true" signature="6251:6312" placeholder="SELECT `type... Manuscript" />
+            <marker date="1493787949000" expanded="true" signature="6980:7105" placeholder="SELECT MAX(`... Typesetting" />
+            <marker date="1493787949000" expanded="true" signature="8376:8454" placeholder="UPDATE Manus... " />
+            <marker date="1493787949000" expanded="true" signature="10800:10860" placeholder="SELECT `type... Manuscript" />
+            <marker date="1493787949000" expanded="true" signature="10800:10861" placeholder="SELECT `type... Manuscript" />
+            <marker date="1493787949000" expanded="true" signature="11152:11254" placeholder="SELECT `publ... Issue" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Editor.form">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/DatebaseConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1064,7 +1094,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1083,7 +1112,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1091,7 +1119,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1127,17 +1154,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Login.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6011561">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DatebaseConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5604396">
@@ -1149,26 +1165,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Login.java">
+    <entry file="file://$PROJECT_DIR$/src/Issue.form">
+      <provider editor-type-id="ui-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43076923">
-          <caret line="95" column="74" selection-start-line="95" selection-start-column="74" selection-end-line="95" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1493781239000" expanded="true" signature="940:968" placeholder="SELECT inter... RICodes" />
-            <marker date="1493781239000" expanded="true" signature="2521:2571" placeholder="SELECT * FRO... missingValue" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Issue.form">
-      <provider selected="true" editor-type-id="ui-designer">
+    <entry file="file://$PROJECT_DIR$/src/Editor.form">
+      <provider editor-type-id="ui-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Editor.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Editor.java">
@@ -1177,7 +1193,6 @@
           <caret line="73" column="44" selection-start-line="73" selection-start-column="44" selection-end-line="73" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#14733#14741#0" expanded="true" />
             <marker date="1493787949000" expanded="true" signature="2207:2245" placeholder="SELECT * FRO... Editor" />
             <marker date="1493787949000" expanded="true" signature="4953:5031" placeholder="UPDATE Manus... " />
             <marker date="1493787949000" expanded="true" signature="5145:5223" placeholder="UPDATE Manus... " />
@@ -1196,11 +1211,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Issue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.3703704">
+        <state vertical-scroll-proportion="0.0">
           <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6793#6801#0" expanded="true" />
             <marker date="1493788173000" expanded="true" signature="3074:3211" placeholder="UPDATE Issue... " />
             <marker date="1493788173000" expanded="true" signature="3256:3383" placeholder="SELECT idMan... Typesetting" />
             <marker date="1493788173000" expanded="true" signature="3950:4018" placeholder="UPDATE Manus... " />
@@ -1210,12 +1224,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Assignment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.9259257">
+        <state vertical-scroll-proportion="0.0">
           <caret line="252" column="45" selection-start-line="252" selection-start-column="33" selection-end-line="252" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6663#6671#0" expanded="true" />
-            <element signature="e#10932#10940#0" expanded="true" />
             <marker date="1493787774000" expanded="true" signature="3504:3567" placeholder="SELECT `code... Manuscript" />
             <marker date="1493787774000" expanded="true" signature="4355:4408" placeholder="SELECT `idRe... InterestList" />
             <marker date="1493787774000" expanded="true" signature="5240:5335" placeholder="SELECT `idRe... Reviewer" />
@@ -1225,9 +1237,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Assignment.form">
+      <provider editor-type-id="ui-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Reviewer.form">
+      <provider editor-type-id="ui-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ButtonColumn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1493781239000" expanded="true" signature="940:968" placeholder="SELECT inter... RICodes" />
+            <marker date="1493781239000" expanded="true" signature="2521:2571" placeholder="SELECT * FRO... missingValue" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Register.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-64.703705">
+        <state vertical-scroll-proportion="0.0">
           <caret line="142" column="66" selection-start-line="142" selection-start-column="66" selection-end-line="142" selection-end-column="66" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1246,39 +1300,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Assignment.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Reviewer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="103" column="42" selection-start-line="103" selection-start-column="42" selection-end-line="103" selection-end-column="42" />
+          <caret line="246" column="85" selection-start-line="246" selection-start-column="85" selection-end-line="246" selection-end-column="85" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6116#6117#0" expanded="true" />
-            <element signature="e#6155#6156#0" expanded="true" />
-            <element signature="e#6429#6430#0" expanded="true" />
-            <element signature="e#6468#6469#0" expanded="true" />
-            <element signature="e#6754#6755#0" expanded="true" />
-            <element signature="e#6793#6794#0" expanded="true" />
-            <element signature="e#7082#7083#0" expanded="true" />
-            <element signature="e#7121#7122#0" expanded="true" />
-            <element signature="e#7440#7441#0" expanded="true" />
-            <element signature="e#7479#7480#0" expanded="true" />
-            <element signature="e#9155#9163#0" expanded="true" />
-            <marker date="1493788532000" expanded="true" signature="1926:1968" placeholder="SELECT * FRO... Reviewer" />
-            <marker date="1493788532000" expanded="true" signature="4650:4967" placeholder="INSERT INTO Feedback... " />
-            <marker date="1493788532000" expanded="true" signature="5069:5107" placeholder="SELECT MAX(`... Feedback" />
-            <marker date="1493788532000" expanded="true" signature="5277:5431" placeholder="UPDATE Assig... " />
+            <marker date="1493827295000" expanded="true" signature="1961:2003" placeholder="SELECT * FRO... Reviewer" />
+            <marker date="1493827295000" expanded="true" signature="4685:5002" placeholder="INSERT INTO Feedback... " />
+            <marker date="1493827295000" expanded="true" signature="5104:5142" placeholder="SELECT MAX(`... Feedback" />
+            <marker date="1493827295000" expanded="true" signature="5312:5466" placeholder="UPDATE Assig... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Reviewer.form">
+    <entry file="file://$PROJECT_DIR$/src/Login.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.6011561">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Feedback.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Feedback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.72527474">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1493827371000" expanded="true" signature="3490:3807" placeholder="INSERT INTO Feedback... " />
+            <marker date="1493827371000" expanded="true" signature="3909:3947" placeholder="SELECT MAX(`... Feedback" />
+            <marker date="1493827371000" expanded="true" signature="4117:4261" placeholder="UPDATE Assig... " />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>

@@ -2,6 +2,7 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -59,7 +60,7 @@ public class Reviewer {
     public Reviewer(int userid) {
         frame = new JFrame("Reviewer");
         frame.setContentPane(Reviewer);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
 
@@ -155,6 +156,25 @@ public class Reviewer {
             }
         });
 
+        Resign_btn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String delete = "DELETE FROM Reviewer WHERE `idReview` = " + reviewer_id;
+
+                System.out.println(delete);
+                JOptionPane.showMessageDialog(frame, "Thank you for your service.");
+
+                try {
+                    stmt.close();
+                    con.close();
+                } catch (SQLException e1) {
+                    e1.printStackTrace();
+                }
+                frame.dispose();
+                new Login();
+            }
+        });
+
         appropriateness_select.addItem("-");
         for(int i = 1; i <= 10; i++)
             appropriateness_select.addItem(i + "");
@@ -218,15 +238,20 @@ public class Reviewer {
                     + " AND `clarity` IS NOT NULL ORDER BY `assignDate`";
 //        else
 //            sql = "SELECT `publicationYear`,`publicationPeriod`,`volume`,`pages`,`printDate` FROM Issue WHERE `printDate` IS NULL ORDER BY `publicationYear` DESC,`publicationPeriod`";
-        DefaultTableModel dtm = buildTableModel(stmt, sql);
+        DefaultTableModel dtm = buildTableModel(stmt, sql, status);
 
         JTable table = new JTable(dtm);
         table.setFillsViewportHeight(true);
         table.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
+        if(status.equals("ALL")) {
+            ButtonColumn buttonColumn = new ButtonColumn(table, feedback, columnCount);
+            buttonColumn.setMnemonic(KeyEvent.VK_D);
+        }
         return table;
     }
 
-    public static DefaultTableModel buildTableModel (Statement stmt, String sql){
+    static int columnCount = 0;
+    public static DefaultTableModel buildTableModel (Statement stmt, String sql, String status){
         Vector<String> columnNames = new Vector<>();
         Vector<Vector<Object>> data = new Vector<>();
         try {
@@ -234,24 +259,20 @@ public class Reviewer {
 
             ResultSetMetaData metaData = rs.getMetaData();
 
-            int columnCount = metaData.getColumnCount();
+            columnCount = metaData.getColumnCount();
             for (int column = 1; column <= columnCount; column++) {
                 columnNames.add(metaData.getColumnName(column));
             }
-//            columnNames.add("Feedback");
+            if(status.equals("ALL"))
+                columnNames.add("");
             while (rs.next()) {
                 Vector<Object> vector = new Vector<Object>();
                 for (int columnIndex = 1; columnIndex <= columnCount; columnIndex++) {
                     vector.add(rs.getObject(columnIndex));
                 }
-//                JButton temp = new JButton("Feedback");
-//                temp.addActionListener(new ActionListener() {
-//                    @Override
-//                    public void actionPerformed(ActionEvent e) {
-//
-//                    }
-//                });
-//                vector.add(temp);
+
+                if(status.equals("ALL"))
+                    vector.add("Feedback");
                 data.add(vector);
             }
 
@@ -260,6 +281,21 @@ public class Reviewer {
         }
         return new DefaultTableModel(data, columnNames);
     }
+
+    Action feedback = new AbstractAction()
+    {
+        public void actionPerformed(ActionEvent e)
+        {
+            JTable table = (JTable)e.getSource();
+            int modelRow = Integer.valueOf( e.getActionCommand() );
+            int idReviewer = (int) ((DefaultTableModel)table.getModel()).getValueAt(modelRow, 1);
+            int idManuscript = (int)((DefaultTableModel)table.getModel()).getValueAt(modelRow, 1);
+            new Feedback(idReviewer, idManuscript);
+
+            myTable = createTable("ALL");
+            Manuscript_List.setViewportView(myTable);
+        }
+    };
 
     public static boolean isNumeric(String str)
     {
