@@ -30,118 +30,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Register.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Register.java">
+      <file leaf-file-name="Reviewer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Reviewer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="197" column="55" selection-start-line="197" selection-start-column="55" selection-end-line="197" selection-end-column="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1493732722000" expanded="true" signature="1342:1363" placeholder="SELECT inter... RICodes" />
-                <marker date="1493732722000" expanded="true" signature="4392:4461" placeholder="INSERT INTO Editor... " />
-                <marker date="1493732722000" expanded="true" signature="4854:4888" placeholder="SELECT MAX(`... Editor" />
-                <marker date="1493732722000" expanded="true" signature="5424:5521" placeholder="INSERT INTO Author... " />
-                <marker date="1493732722000" expanded="true" signature="5424:5586" placeholder="INSERT INTO Editor... " />
-                <marker date="1493732722000" expanded="true" signature="6229:6257" placeholder="SELECT MAX(`... Editor" />
-                <marker date="1493732722000" expanded="true" signature="6229:6263" placeholder="SELECT MAX(`... Author" />
-                <marker date="1493732722000" expanded="true" signature="6762:6912" placeholder="INSERT INTO Author... " />
-                <marker date="1493732722000" expanded="true" signature="7834:7872" placeholder="SELECT MAX(`... Reviewer" />
-                <marker date="1493732722000" expanded="true" signature="8156:8209" placeholder="INSERT INTO InterestList... " />
-                <marker date="1493732722000" expanded="true" signature="8156:8210" placeholder="INSERT INTO InterestList... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Register.form" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Register.form">
-          <provider selected="true" editor-type-id="ui-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Login.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Login.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1493699002000" expanded="true" signature="940:968" placeholder="SELECT inter... RICodes" />
-                <marker date="1493699002000" expanded="true" signature="2518:2568" placeholder="SELECT * FRO... missingValue" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Editor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Editor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.5925925">
-              <caret line="195" column="56" selection-start-line="195" selection-start-column="56" selection-end-line="195" selection-end-column="56" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3235#3236#0" expanded="true" />
-                <element signature="e#3278#3279#0" expanded="true" />
-                <element signature="e#13904#13912#0" expanded="true" />
-                <marker date="1493751952000" expanded="true" signature="2030:2068" placeholder="SELECT * FRO... Editor" />
-                <marker date="1493751952000" expanded="true" signature="4199:4277" placeholder="UPDATE Manus... " />
-                <marker date="1493751952000" expanded="true" signature="4391:4469" placeholder="UPDATE Manus... " />
-                <marker date="1493751952000" expanded="true" signature="5116:5191" placeholder="UPDATE Manus... " />
-                <marker date="1493751952000" expanded="true" signature="5116:5228" placeholder="UPDATE Manus... " />
-                <marker date="1493751952000" expanded="true" signature="5359:5437" placeholder="UPDATE Manus... " />
-                <marker date="1493751952000" expanded="true" signature="5497:5558" placeholder="SELECT `type... Manuscript" />
-                <marker date="1493751952000" expanded="true" signature="6226:6351" placeholder="SELECT MAX(`... Typesetting" />
-                <marker date="1493751952000" expanded="true" signature="7622:7700" placeholder="UPDATE Manus... " />
-                <marker date="1493751952000" expanded="true" signature="10046:10106" placeholder="SELECT `type... Manuscript" />
-                <marker date="1493751952000" expanded="true" signature="10046:10107" placeholder="SELECT `type... Manuscript" />
-                <marker date="1493751952000" expanded="true" signature="10398:10500" placeholder="SELECT `publ... Issue" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Issue.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Issue.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-28.074074">
-              <caret line="170" column="0" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
-              <folding>
-                <element signature="e#6844#6852#0" expanded="true" />
-                <marker date="1493752510000" expanded="true" signature="3126:3263" placeholder="UPDATE Issue... " />
-                <marker date="1493752510000" expanded="true" signature="3308:3435" placeholder="SELECT idMan... Typesetting" />
-                <marker date="1493752510000" expanded="true" signature="4001:4069" placeholder="UPDATE Manus... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Assignment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Assignment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Assignment.form" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Assignment.form">
-          <provider selected="true" editor-type-id="ui-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Issue.form" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Issue.form">
-          <provider selected="true" editor-type-id="ui-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Editor.form" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Editor.form">
+      <file leaf-file-name="Reviewer.form" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Reviewer.form">
           <provider selected="true" editor-type-id="ui-designer">
             <state />
           </provider>
@@ -166,19 +66,22 @@
       <list>
         <option value="$PROJECT_DIR$/src/UserLogin.form" />
         <option value="$PROJECT_DIR$/src/UserLogin.java" />
-        <option value="$PROJECT_DIR$/src/DatebaseConnection.java" />
         <option value="$PROJECT_DIR$/src/Enterance.java" />
         <option value="$PROJECT_DIR$/src/EditorRegister.form" />
         <option value="$PROJECT_DIR$/src/EditorRegister.java" />
         <option value="$PROJECT_DIR$/src/Login.form" />
         <option value="$PROJECT_DIR$/src/Register.form" />
         <option value="$PROJECT_DIR$/src/CreateTableData.java" />
+        <option value="$PROJECT_DIR$/src/Issue.form" />
+        <option value="$PROJECT_DIR$/src/Issue.java" />
         <option value="$PROJECT_DIR$/src/Login.java" />
         <option value="$PROJECT_DIR$/src/Register.java" />
         <option value="$PROJECT_DIR$/src/Editor.form" />
         <option value="$PROJECT_DIR$/src/Editor.java" />
-        <option value="$PROJECT_DIR$/src/Issue.form" />
-        <option value="$PROJECT_DIR$/src/Issue.java" />
+        <option value="$PROJECT_DIR$/src/Assignment.form" />
+        <option value="$PROJECT_DIR$/src/DatebaseConnection.java" />
+        <option value="$PROJECT_DIR$/src/Assignment.java" />
+        <option value="$PROJECT_DIR$/src/Reviewer.form" />
       </list>
     </option>
   </component>
@@ -912,16 +815,16 @@
       <updated>1493316985684</updated>
       <workItem from="1493316987808" duration="10219000" />
       <workItem from="1493515860851" duration="9496000" />
-      <workItem from="1493580369717" duration="44927000" />
+      <workItem from="1493580369717" duration="59850000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64642000" />
+    <option name="totallyTimeSpent" value="79565000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="26" width="1297" height="812" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -930,7 +833,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24940239" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -970,7 +873,7 @@
           <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1493387521000" expanded="true" signature="371:402" placeholder="SELECT * FRO... reviewer" />
+            <marker date="1493770427000" expanded="true" signature="371:402" placeholder="SELECT * FRO... reviewer" />
           </folding>
         </state>
       </provider>
@@ -981,17 +884,17 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1493732722000" expanded="true" signature="1342:1363" placeholder="SELECT inter... RICodes" />
-            <marker date="1493732722000" expanded="true" signature="4392:4461" placeholder="INSERT INTO Editor... " />
-            <marker date="1493732722000" expanded="true" signature="4854:4888" placeholder="SELECT MAX(`... Editor" />
-            <marker date="1493732722000" expanded="true" signature="5424:5521" placeholder="INSERT INTO Author... " />
-            <marker date="1493732722000" expanded="true" signature="5424:5586" placeholder="INSERT INTO Editor... " />
-            <marker date="1493732722000" expanded="true" signature="6229:6257" placeholder="SELECT MAX(`... Editor" />
-            <marker date="1493732722000" expanded="true" signature="6229:6263" placeholder="SELECT MAX(`... Author" />
-            <marker date="1493732722000" expanded="true" signature="6762:6912" placeholder="INSERT INTO Author... " />
-            <marker date="1493732722000" expanded="true" signature="7834:7872" placeholder="SELECT MAX(`... Reviewer" />
-            <marker date="1493732722000" expanded="true" signature="8156:8209" placeholder="INSERT INTO InterestList... " />
-            <marker date="1493732722000" expanded="true" signature="8156:8210" placeholder="INSERT INTO InterestList... " />
+            <marker date="1493765821000" expanded="true" signature="1342:1363" placeholder="SELECT inter... RICodes" />
+            <marker date="1493765821000" expanded="true" signature="4395:4464" placeholder="INSERT INTO Editor... " />
+            <marker date="1493765821000" expanded="true" signature="4857:4891" placeholder="SELECT MAX(`... Editor" />
+            <marker date="1493765821000" expanded="true" signature="5427:5524" placeholder="INSERT INTO Author... " />
+            <marker date="1493765821000" expanded="true" signature="5427:5589" placeholder="INSERT INTO Editor... " />
+            <marker date="1493765821000" expanded="true" signature="6232:6260" placeholder="SELECT MAX(`... Editor" />
+            <marker date="1493765821000" expanded="true" signature="6232:6266" placeholder="SELECT MAX(`... Author" />
+            <marker date="1493765821000" expanded="true" signature="6765:6915" placeholder="INSERT INTO Author... " />
+            <marker date="1493765821000" expanded="true" signature="7837:7875" placeholder="SELECT MAX(`... Reviewer" />
+            <marker date="1493765821000" expanded="true" signature="8159:8212" placeholder="INSERT INTO InterestList... " />
+            <marker date="1493765821000" expanded="true" signature="8159:8213" placeholder="INSERT INTO InterestList... " />
           </folding>
         </state>
       </provider>
@@ -1002,8 +905,8 @@
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1493699002000" expanded="true" signature="940:968" placeholder="SELECT inter... RICodes" />
-            <marker date="1493699002000" expanded="true" signature="2518:2568" placeholder="SELECT * FRO... missingValue" />
+            <marker date="1493765799000" expanded="true" signature="940:968" placeholder="SELECT inter... RICodes" />
+            <marker date="1493765799000" expanded="true" signature="2521:2571" placeholder="SELECT * FRO... missingValue" />
           </folding>
         </state>
       </provider>
@@ -1038,7 +941,7 @@
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1493387521000" expanded="true" signature="371:402" placeholder="SELECT * FRO... reviewer" />
+            <marker date="1493770427000" expanded="true" signature="371:402" placeholder="SELECT * FRO... reviewer" />
           </folding>
         </state>
       </provider>
@@ -1052,54 +955,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DatabaeLab2.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DatebaseConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="13" selection-start-line="40" selection-start-column="11" selection-end-line="46" selection-end-column="13" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1493387521000" expanded="true" signature="371:402" placeholder="SELECT * FRO... reviewer" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Login.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6011561">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Author.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Reviewer.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Author.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Reviewer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1115,25 +970,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Register.java">
+    <entry file="file://$PROJECT_DIR$/src/Login.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="197" column="55" selection-start-line="197" selection-start-column="55" selection-end-line="197" selection-end-column="55" />
+          <caret line="43" column="64" selection-start-line="43" selection-start-column="64" selection-end-line="43" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1493732722000" expanded="true" signature="1342:1363" placeholder="SELECT inter... RICodes" />
-            <marker date="1493732722000" expanded="true" signature="4392:4461" placeholder="INSERT INTO Editor... " />
-            <marker date="1493732722000" expanded="true" signature="4854:4888" placeholder="SELECT MAX(`... Editor" />
-            <marker date="1493732722000" expanded="true" signature="5424:5521" placeholder="INSERT INTO Author... " />
-            <marker date="1493732722000" expanded="true" signature="5424:5586" placeholder="INSERT INTO Editor... " />
-            <marker date="1493732722000" expanded="true" signature="6229:6257" placeholder="SELECT MAX(`... Editor" />
-            <marker date="1493732722000" expanded="true" signature="6229:6263" placeholder="SELECT MAX(`... Author" />
-            <marker date="1493732722000" expanded="true" signature="6762:6912" placeholder="INSERT INTO Author... " />
-            <marker date="1493732722000" expanded="true" signature="7834:7872" placeholder="SELECT MAX(`... Reviewer" />
-            <marker date="1493732722000" expanded="true" signature="8156:8209" placeholder="INSERT INTO InterestList... " />
-            <marker date="1493732722000" expanded="true" signature="8156:8210" placeholder="INSERT INTO InterestList... " />
+            <marker date="1493765799000" expanded="true" signature="940:968" placeholder="SELECT inter... RICodes" />
+            <marker date="1493765799000" expanded="true" signature="2521:2571" placeholder="SELECT * FRO... missingValue" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Register.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.0370371">
+          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1493765821000" expanded="true" signature="1342:1363" placeholder="SELECT inter... RICodes" />
+            <marker date="1493765821000" expanded="true" signature="4395:4464" placeholder="INSERT INTO Editor... " />
+            <marker date="1493765821000" expanded="true" signature="4857:4891" placeholder="SELECT MAX(`... Editor" />
+            <marker date="1493765821000" expanded="true" signature="5427:5524" placeholder="INSERT INTO Author... " />
+            <marker date="1493765821000" expanded="true" signature="5427:5589" placeholder="INSERT INTO Editor... " />
+            <marker date="1493765821000" expanded="true" signature="6232:6260" placeholder="SELECT MAX(`... Editor" />
+            <marker date="1493765821000" expanded="true" signature="6232:6266" placeholder="SELECT MAX(`... Author" />
+            <marker date="1493765821000" expanded="true" signature="6765:6915" placeholder="INSERT INTO Author... " />
+            <marker date="1493765821000" expanded="true" signature="7837:7875" placeholder="SELECT MAX(`... Reviewer" />
+            <marker date="1493765821000" expanded="true" signature="8159:8212" placeholder="INSERT INTO InterestList... " />
+            <marker date="1493765821000" expanded="true" signature="8159:8213" placeholder="INSERT INTO InterestList... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Author.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Issue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="33.037037">
+          <caret line="48" column="64" selection-start-line="48" selection-start-column="64" selection-end-line="48" selection-end-column="64" />
+          <folding>
+            <element signature="e#6847#6855#0" expanded="true" />
+            <marker date="1493765791000" expanded="true" signature="3129:3266" placeholder="UPDATE Issue... " />
+            <marker date="1493765791000" expanded="true" signature="3311:3438" placeholder="SELECT idMan... Typesetting" />
+            <marker date="1493765791000" expanded="true" signature="4004:4072" placeholder="UPDATE Manus... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Author.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Editor.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Issue.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Register.form">
@@ -1147,75 +1050,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Editor.form">
+    <entry file="file://$PROJECT_DIR$/src/Login.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Issue.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1493699002000" expanded="true" signature="940:968" placeholder="SELECT inter... RICodes" />
-            <marker date="1493699002000" expanded="true" signature="2518:2568" placeholder="SELECT * FRO... missingValue" />
-          </folding>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.6011561">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Editor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.5925925">
-          <caret line="195" column="56" selection-start-line="195" selection-start-column="56" selection-end-line="195" selection-end-column="56" />
+        <state vertical-scroll-proportion="-11.407408">
+          <caret line="390" column="5" selection-start-line="373" selection-start-column="4" selection-end-line="390" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3235#3236#0" expanded="true" />
-            <element signature="e#3278#3279#0" expanded="true" />
-            <element signature="e#13904#13912#0" expanded="true" />
-            <marker date="1493751952000" expanded="true" signature="2030:2068" placeholder="SELECT * FRO... Editor" />
-            <marker date="1493751952000" expanded="true" signature="4199:4277" placeholder="UPDATE Manus... " />
-            <marker date="1493751952000" expanded="true" signature="4391:4469" placeholder="UPDATE Manus... " />
-            <marker date="1493751952000" expanded="true" signature="5116:5191" placeholder="UPDATE Manus... " />
-            <marker date="1493751952000" expanded="true" signature="5116:5228" placeholder="UPDATE Manus... " />
-            <marker date="1493751952000" expanded="true" signature="5359:5437" placeholder="UPDATE Manus... " />
-            <marker date="1493751952000" expanded="true" signature="5497:5558" placeholder="SELECT `type... Manuscript" />
-            <marker date="1493751952000" expanded="true" signature="6226:6351" placeholder="SELECT MAX(`... Typesetting" />
-            <marker date="1493751952000" expanded="true" signature="7622:7700" placeholder="UPDATE Manus... " />
-            <marker date="1493751952000" expanded="true" signature="10046:10106" placeholder="SELECT `type... Manuscript" />
-            <marker date="1493751952000" expanded="true" signature="10046:10107" placeholder="SELECT `type... Manuscript" />
-            <marker date="1493751952000" expanded="true" signature="10398:10500" placeholder="SELECT `publ... Issue" />
+            <element signature="e#3365#3366#0" expanded="true" />
+            <element signature="e#3408#3409#0" expanded="true" />
+            <element signature="e#3564#3565#0" expanded="true" />
+            <element signature="e#3612#3613#0" expanded="true" />
+            <element signature="e#14686#14694#0" expanded="true" />
+            <marker date="1493768547000" expanded="true" signature="2160:2198" placeholder="SELECT * FRO... Editor" />
+            <marker date="1493768547000" expanded="true" signature="4906:4984" placeholder="UPDATE Manus... " />
+            <marker date="1493768547000" expanded="true" signature="5098:5176" placeholder="UPDATE Manus... " />
+            <marker date="1493768547000" expanded="true" signature="5823:5898" placeholder="UPDATE Manus... " />
+            <marker date="1493768547000" expanded="true" signature="5823:5935" placeholder="UPDATE Manus... " />
+            <marker date="1493768547000" expanded="true" signature="6066:6144" placeholder="UPDATE Manus... " />
+            <marker date="1493768547000" expanded="true" signature="6204:6265" placeholder="SELECT `type... Manuscript" />
+            <marker date="1493768547000" expanded="true" signature="6933:7058" placeholder="SELECT MAX(`... Typesetting" />
+            <marker date="1493768547000" expanded="true" signature="8329:8407" placeholder="UPDATE Manus... " />
+            <marker date="1493768547000" expanded="true" signature="10753:10813" placeholder="SELECT `type... Manuscript" />
+            <marker date="1493768547000" expanded="true" signature="10753:10814" placeholder="SELECT `type... Manuscript" />
+            <marker date="1493768547000" expanded="true" signature="11105:11207" placeholder="SELECT `publ... Issue" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Issue.java">
+    <entry file="file://$PROJECT_DIR$/src/DatebaseConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-28.074074">
-          <caret line="170" column="0" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="78" column="19" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
           <folding>
-            <element signature="e#6844#6852#0" expanded="true" />
-            <marker date="1493752510000" expanded="true" signature="3126:3263" placeholder="UPDATE Issue... " />
-            <marker date="1493752510000" expanded="true" signature="3308:3435" placeholder="SELECT idMan... Typesetting" />
-            <marker date="1493752510000" expanded="true" signature="4001:4069" placeholder="UPDATE Manus... " />
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1493770427000" expanded="true" signature="371:402" placeholder="SELECT * FRO... reviewer" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Assignment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="-8.074074">
+          <caret line="302" column="5" selection-start-line="302" selection-start-column="5" selection-end-line="302" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6531#6539#0" expanded="true" />
+            <element signature="e#10633#10641#0" expanded="true" />
+            <marker date="1493770463000" expanded="true" signature="3421:3484" placeholder="SELECT `code... Manuscript" />
+            <marker date="1493770463000" expanded="true" signature="4272:4325" placeholder="SELECT `idRe... InterestList" />
+            <marker date="1493770463000" expanded="true" signature="5108:5203" placeholder="SELECT `idRe... Reviewer" />
+            <marker date="1493770463000" expanded="true" signature="7198:7375" placeholder="INSERT INTO Assignment... " />
+            <marker date="1493770463000" expanded="true" signature="7666:7738" placeholder="UPDATE Manus... " />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Assignment.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Reviewer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Reviewer.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
       </provider>

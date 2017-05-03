@@ -55,7 +55,7 @@ public class DatebaseConnection {
                 res.close();
                 stmt.close();
                 con.close();
-                System.out.print("\nConnection terminated.");
+                System.out.println("Connection terminated.");
             } catch (Exception e) { /* ignore cleanup errors */ }
         }
     }

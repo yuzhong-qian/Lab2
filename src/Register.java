@@ -53,7 +53,7 @@ public class Register {
 
     public Register() {
         frame.setContentPane(Register_Panel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
 
@@ -256,6 +256,19 @@ public class Register {
                 }
             }
         });
+
+        Interest1_select.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String s = (String) Interest1_select.getSelectedItem();//get the selected item
+                if(s.equals((String) Interest2_select.getSelectedItem()) || s.equals((String) Interest3_select.getSelectedItem())) {
+                    Interest1_select.setSelectedIndex(0);
+                    JOptionPane.showConfirmDialog(frame,
+                            "You cannot choose duplicated interests!");
+                }
+            }
+        });
+
         Interest2_select.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

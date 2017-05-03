@@ -39,10 +39,15 @@ public class Editor {
     private JLabel Issues;
     private JComboBox Issues_Select;
     private JPanel Issues_Select_Part;
+    private JPanel Search_Part;
+    private JTextField Search_text;
+    private JButton Search;
     private Connection con = null;
     private Statement stmt = null;
     private PreparedStatement preparedStatement = null;
     private ResultSet rst = null;
+
+    private String[] keyword;
 
 
     public static void main(String[] args) {
@@ -60,7 +65,7 @@ public class Editor {
     public Editor(int userid) {
         frame = new JFrame("Editor");
         frame.setContentPane(Editor);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
 
@@ -105,6 +110,24 @@ public class Editor {
             @Override
             public void actionPerformed(ActionEvent e) {
                 new Issue();
+            }
+        });
+
+        Assignment_btn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new Assignment();
+            }
+        });
+
+        Search.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String nameList = Search_text.getText();
+                keyword = nameList.split("\\s+");
+
+                myTable = createTable("Search");
+                Manuscripts.setViewportView(myTable);
             }
         });
 
@@ -295,6 +318,8 @@ public class Editor {
         if(status.equals("ALL"))
             sql = "SELECT `idManuscript`,`title`,`date`,`status`,`authorList`,`typesetPages` FROM Manuscript ORDER BY FIELD(`status`, " +
                     "'Submitted', 'Under review', 'Rejected', 'Accepted', 'In typesetting', 'Scheduled for publication', 'Published')" ;
+        else if(status.equals("Search"))
+            sql = constructSql();
         else
             sql = "SELECT `idManuscript`,`title`,`date`,`status`,`authorList`,`typesetPages` FROM Manuscript WHERE `status` = '" + status + "' ORDER BY FIELD(`status`, " +
                     "'Submitted', 'Under review', 'Rejected', 'Accepted', 'In typesetting', 'Scheduled for publication', 'Published')" ;
@@ -344,5 +369,24 @@ public class Editor {
         String[] temp4 = temp[1].split(":");
         String[] issue = new String[]{temp3[0], temp3[1], temp4[1]};
         return issue;
+    }
+
+    public String constructSql() {
+        String sql = "";
+        String core_part = "";
+        for(String s: keyword) {
+            core_part += " `authorList` LIKE '%" + s + "%' OR `title` LIKE '%" + s + "%' OR";
+        }
+        core_part = core_part.substring(0, core_part.length() - 2);
+        String status = (String)Status_Select.getSelectedItem();
+        if(status.equals("ALL")) {
+            sql = "SELECT `idManuscript`,`title`,`date`,`status`,`authorList`,`typesetPages` FROM Manuscript WHERE " + core_part + " ORDER BY FIELD(`status`, " +
+                    "'Submitted', 'Under review', 'Rejected', 'Accepted', 'In typesetting', 'Scheduled for publication', 'Published')" ;
+        } else {
+            sql = "SELECT `idManuscript`,`title`,`date`,`status`,`authorList`,`typesetPages` FROM Manuscript WHERE " + core_part + " AND `status` = '" + status + "' ORDER BY FIELD(`status`, " +
+                    "'Submitted', 'Under review', 'Rejected', 'Accepted', 'In typesetting', 'Scheduled for publication', 'Published')" ;
+        }
+
+        return sql;
     }
 }

@@ -41,7 +41,7 @@ public class Login {
 
     public Login(){
         frame.setContentPane(Login);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
         //Add three types of user

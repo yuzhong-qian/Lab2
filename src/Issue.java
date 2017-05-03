@@ -46,7 +46,7 @@ public class Issue {
     public Issue() {
         JFrame frame = new JFrame("Issue");
         frame.setContentPane(Issues);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
 
