@@ -288,12 +288,9 @@ public class Reviewer {
         {
             JTable table = (JTable)e.getSource();
             int modelRow = Integer.valueOf( e.getActionCommand() );
-            int idReviewer = (int) ((DefaultTableModel)table.getModel()).getValueAt(modelRow, 1);
+            int idReviewer = (int) ((DefaultTableModel)table.getModel()).getValueAt(modelRow, 0);
             int idManuscript = (int)((DefaultTableModel)table.getModel()).getValueAt(modelRow, 1);
             new Feedback(idReviewer, idManuscript);
-
-            myTable = createTable("ALL");
-            Manuscript_List.setViewportView(myTable);
         }
     };
 

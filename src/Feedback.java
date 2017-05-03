@@ -99,15 +99,22 @@ public class Feedback {
                     stmt.execute(insert);
 
                     String id = "SELECT MAX(`idFeedback`) FROM Feedback";
+
+
                     rst = stmt.executeQuery(id);
                     rst.next();
                     int id_max = rst.getInt(1);
 
+                    System.out.println("Feedback ID " + id_max);
                     String update = "UPDATE Assignment SET `idFeedback` = " + id_max + " WHERE `idManuscript` = " +  idManuscript +
                             " AND `idReviewer` = " + idReviewer;
+                    System.out.println(update);
                     stmt.execute(update);
 
                     JOptionPane.showMessageDialog(frame, "Your feedback successfully submitted!");
+
+                    stmt.close();
+                    con.close();
                     frame.dispose();
                 } catch (SQLException e1) {
                     e1.printStackTrace();
