@@ -93,7 +93,7 @@ public class Login {
                     frame.dispose();
                     if(user.equals("Editor")) new Editor(userid);
                     else if(user.equals("Author")) new Author();
-                    else if(user.equals("Reviewer")) new Reviewer();
+                    else if(user.equals("Reviewer")) new Reviewer(userid);
                     else JOptionPane.showMessageDialog(frame,
                                 "No such user type!");
                     try {

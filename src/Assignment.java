@@ -57,9 +57,10 @@ public class Assignment {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
-
+        Search_text.setText("Manuscript ID");
         Reviewer_List.setVisible(false);
         Add_Reviewer_btn.setVisible(false);
+        Assign_btn.setVisible(false);
 
         reviewers = new ArrayList<>();
         items = new ArrayList<>();
@@ -135,6 +136,7 @@ public class Assignment {
 
                     Reviewer_List.setVisible(true);
                     Add_Reviewer_btn.setVisible(true);
+                    Assign_btn.setVisible(true);
 
                     for(int i: available_reviewer_list) {
                         select = "SELECT `idReviewer`, `reviewerLastName`,`reviewerFirstName` FROM Reviewer WHERE `idReviewer` = " + i;
@@ -201,6 +203,9 @@ public class Assignment {
                 }
                 myTable = createTable((String)Status_Select.getSelectedItem());
                 Assignments_List.setViewportView(myTable);
+                Reviewer_List.setVisible(false);
+                Add_Reviewer_btn.setVisible(false);
+                Assign_btn.setVisible(false);
 
                 message = message.substring(0, message.length() - 2) + "!";
                 JOptionPane.showMessageDialog(frame, message);
@@ -208,7 +213,7 @@ public class Assignment {
         });
 
         Status_Select.addItem("ALL");
-        Status_Select.addItem("Can publish");
+        Status_Select.addItem("Received all feedback");
         Status_Select.addItem("Wait for feedback");
         Status_Select.addActionListener(new ActionListener() {
             @Override
@@ -244,7 +249,7 @@ public class Assignment {
         String sql = null;
         if(status.equals("ALL"))
             sql = "SELECT * FROM ReviewStatus";
-        else if(status.equals("Can publish"))
+        else if(status.equals("Received all feedback"))
             sql = "SELECT * FROM ReviewStatus WHERE `appropriateness` IS NOT NULL ORDER BY `idManuscript`";
         else if(status.equals("Search"))
             sql = constructSql();

@@ -31,7 +31,6 @@ public class Issue {
     private JTable myTable;
     private Connection con = null;
     private Statement stmt = null;
-    private PreparedStatement preparedStatement = null;
     private ResultSet rst = null;
 
 
@@ -56,6 +55,7 @@ public class Issue {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
 
         myTable = createTable("ALL");
         Issues_List.setViewportView(myTable);
@@ -91,6 +91,7 @@ public class Issue {
                 String timeStamp = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime());
                 String update_printdate = "UPDATE Issue SET `printDate` = '" + timeStamp + "' WHERE `publicationYear` = '" + year_int + "' AND `publicationPeriod` = '" + period +"';";
                 String manu_published = "SELECT idManuscript FROM Typesetting WHERE `publicationYear` = '" + year_int + "' AND `publicationPeriod` = '" + period_int +"';";
+
                 try {
                     stmt.execute(update_printdate);
                     JOptionPane.showMessageDialog(frame, "Issue(" + year + " " + period +") has been published!");

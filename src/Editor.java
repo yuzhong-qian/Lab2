@@ -71,7 +71,7 @@ public class Editor {
 
         Typesetting_Part.setVisible(false);
         Issues_Select_Part.setVisible(false);
-
+        Manuscript_ID.setText("Manuscript ID");
         String query = "SELECT * FROM Editor WHERE idEditor = " + userid;
         con = DatebaseConnection.connection();
         try {
