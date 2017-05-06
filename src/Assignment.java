@@ -1,10 +1,12 @@
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.List;
 import java.util.logging.Logger;
 
 /**
@@ -187,9 +189,11 @@ public class Assignment {
                 JComboBox temp = new JComboBox();
                 ++count;
                 String s = "Reviewer #" + count;
+
                 JLabel temp2 = new JLabel(s);
                 reviewers.add(temp);
                 for(String item: items) temp.addItem(item);
+//                Reviewer_List.setLayout(new GridBagLayout(2,2));
                 Reviewer_List.add(temp2);
                 Reviewer_List.add(temp);
             }

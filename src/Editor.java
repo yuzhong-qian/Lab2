@@ -70,6 +70,8 @@ public class Editor {
         frame.pack();
         frame.setVisible(true);
         frame.setLocation(340, 5);
+
+        Warning_Message.setVisible(false);
         Typesetting_Part.setVisible(false);
         Issues_Select_Part.setVisible(false);
         Manuscript_ID.setText("Manuscript ID");
