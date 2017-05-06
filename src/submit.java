@@ -150,13 +150,12 @@ public class submit {
                 submit_table.executeUpdate();
                 JOptionPane.showMessageDialog(frame, "You have submitted one manuscript!");
                 submit.frame.dispose();
+
                 Author.frame.setVisible(true);
 
             } else {
                 JOptionPane.showMessageDialog(frame, "You can not submit the manuscript because of no enough reviewers!");
             }
-
-
 
         } catch (SQLException e){
             e.printStackTrace();

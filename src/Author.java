@@ -10,9 +10,6 @@ import java.util.logging.*;
 import java.awt.event.*;
 
 public class Author {
-    public static final String DB_URL = "jdbc:mysql://localhost:3306/luyang_test";
-    public static final String USER = "root";
-    public static final String PASS = "luyang";
 
     public static final Logger logger = Logger.getLogger( Author.class.getName() );
     public static javax.swing.JFrame frame = new javax.swing.JFrame("author_welcome");
@@ -54,6 +51,15 @@ public class Author {
 
     public Author(int idAuthor){
 
+        conn = DatebaseConnection.connection();
+        // initialize a query statement
+        try {
+
+            stmt = conn.createStatement();
+        } catch (java.sql.SQLException e) {
+            e.printStackTrace();
+        }
+
         frame = new JFrame("Author");
         frame.setContentPane(Author);
         frame.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
@@ -72,6 +78,7 @@ public class Author {
             @Override
             public void actionPerformed(ActionEvent e) {
                 getManuStatus(idAuthor);
+                getManuBox(idAuthor);
             }
         });
 
@@ -79,6 +86,7 @@ public class Author {
             @Override
             public void actionPerformed(ActionEvent e) {
                 new submit(idAuthor);
+
             }
         });
         signoutButton.addActionListener(new ActionListener() {
@@ -95,21 +103,22 @@ public class Author {
             }
         });
 
-        ResultSet res  = null;
-        try {
-            res = stmt.executeQuery(QUERY + idAuthor);
-
-            // iterate through results
-            titles = new ArrayList<>();
-            ids = new ArrayList<>();
-            while(res.next()) {
-                ids.add(res.getInt(1));
-                titles.add(res.getString(2));
-                retractBox.addItem(res.getInt(1) + " " + res.getString(2));
-            }
-        }catch(java.sql.SQLException e){
-            e.printStackTrace();
-        }
+//        ResultSet res  = null;
+//        try {
+//            res = stmt.executeQuery(QUERY + idAuthor);
+//
+//            // iterate through results
+//            titles = new ArrayList<>();
+//            ids = new ArrayList<>();
+//            while(res.next()) {
+//                ids.add(res.getInt(1));
+//                titles.add(res.getString(2));
+//                retractBox.addItem(res.getInt(1) + " " + res.getString(2));
+//            }
+//        }catch(java.sql.SQLException e){
+//            e.printStackTrace();
+//        }
+        getManuBox(idAuthor);
 
 
 
@@ -121,6 +130,8 @@ public class Author {
                         "Are you sure to retract this manuscript" + retractBox.getSelectedItem() + "?");
                 int id = getManuId((String)retractBox.getSelectedItem());
                 retractManu(id);
+                getManuBox(idAuthor);
+
             }
         });
 
@@ -150,7 +161,6 @@ public class Author {
         DefaultTableModel dtm = new DefaultTableModel();
 
         try {
-            conn = DriverManager.getConnection(DB_URL,USER,PASS);
             stmt = conn.createStatement();
             String sql = "SELECT title,idManuscript,date FROM Manuscript WHERE idAuthor=" + idAuthor ;
             dtm = buildTableModel(stmt, sql);
@@ -169,11 +179,9 @@ public class Author {
     public static JTable createTable2(int idAuthor){
 
 
-        Statement stmt = null;
-        Connection conn = null;
+
         DefaultTableModel dtm = new DefaultTableModel();
         try {
-            conn = DriverManager.getConnection(DB_URL,USER,PASS);
             stmt = conn.createStatement();
             String sql = "SELECT title,idManuscript,status FROM Manuscript WHERE idAuthor=" + idAuthor ;
             dtm = buildTableModel(stmt, sql);
@@ -219,7 +227,6 @@ public class Author {
 
         String ret = null;
         try {
-            conn = DriverManager.getConnection(DB_URL,USER,PASS);
             stmt = conn.createStatement();
             String sql = "SELECT authorLastName, authorFirstName, mailAddress FROM Author WHERE idAuthor="+idAuthor ;
 
@@ -248,6 +255,32 @@ public class Author {
         return Integer.parseInt(array[0]);
     }
 
+    public void getManuBox(int idAuthor){
+        retractBox.removeAllItems();
+        ResultSet res  = null;
+        try {
+            res = stmt.executeQuery(QUERY + idAuthor);
 
+            // iterate through results
+            titles = new ArrayList<>();
+            ids = new ArrayList<>();
+            while(res.next()) {
+                ids.add(res.getInt(1));
+                titles.add(res.getString(2));
+                String s =  res.getInt(1) + " " + res.getString(2) ;
+
+                String temp = s;
+                if (s.length()>20) {
+                    temp = s.substring(0,20) + "...";
+                }
+
+                System.out.print(temp);
+
+                retractBox.addItem( temp);
+            }
+        }catch(java.sql.SQLException e){
+            e.printStackTrace();
+        }
+    }
 
 }
