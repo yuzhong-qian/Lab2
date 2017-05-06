@@ -160,21 +160,29 @@ public class Reviewer {
         Resign_btn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String delete = "DELETE FROM Reviewer WHERE `idReview` = " + reviewer_id;
+                String delete = "DELETE FROM Reviewer WHERE `idReviewer` = " + reviewer_id;
 
                 System.out.println(delete);
-                JOptionPane.showMessageDialog(frame, "Thank you for your service.");
+                int flag = JOptionPane.showConfirmDialog(frame, "Are you sure to resign?");
+                System.out.println(flag);
+                if(flag == 0) {
+                    JOptionPane.showMessageDialog(frame, "Thank you for your service.");
 
-                try {
-                    stmt.close();
-                    con.close();
-                } catch (SQLException e1) {
-                    e1.printStackTrace();
+                    try {
+                        stmt.execute(delete);
+                        stmt.close();
+                        con.close();
+                    } catch (SQLException e1) {
+                        e1.printStackTrace();
+                    }
+                    frame.dispose();
+                    new Login();
                 }
-                frame.dispose();
-                new Login();
             }
         });
+
+
+
 
         appropriateness_select.addItem("-");
         for(int i = 1; i <= 10; i++)

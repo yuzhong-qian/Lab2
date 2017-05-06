@@ -42,6 +42,7 @@ public class Editor {
     private JPanel Search_Part;
     private JTextField Search_text;
     private JButton Search;
+    private javax.swing.JLabel Warning_Message;
     private Connection con = null;
     private Statement stmt = null;
     private PreparedStatement preparedStatement = null;
@@ -69,11 +70,11 @@ public class Editor {
         frame.pack();
         frame.setVisible(true);
         frame.setLocation(340, 5);
-
         Typesetting_Part.setVisible(false);
         Issues_Select_Part.setVisible(false);
         Manuscript_ID.setText("Manuscript ID");
         String query = "SELECT * FROM Editor WHERE idEditor = " + userid;
+        String warning = "SELECT `idManuscript`, COUNT(*) AS number FROM Assignment GROUP BY `idManuscript`";
         con = DatebaseConnection.connection();
         try {
             stmt = con.createStatement();
@@ -85,6 +86,19 @@ public class Editor {
                 lastname = rst.getString(2);
             }
 
+            rst = stmt.executeQuery(warning);
+            String warning_message = "<html>Some reviewer(s) resigned!<br>Manuscript(s) ";
+            boolean flag = false;
+            while (rst.next()) {
+                if(rst.getInt(2) < 3) {
+                    warning_message += rst.getInt(1) + ", ";
+                    flag = true;
+                }
+            }
+            warning_message = warning_message.substring(0, warning_message.length() - 2);
+            warning_message += " need you<br>to assign new reviewer(s)!";
+            Warning_Message.setText(warning_message);
+            if(flag) Warning_Message.setVisible(true);
             Welcome.setText("Welcome, " + firstname + " " + lastname +"!");
         } catch (SQLException e) {
             e.printStackTrace();
