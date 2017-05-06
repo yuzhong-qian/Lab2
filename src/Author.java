@@ -15,63 +15,140 @@ public class Author {
     public static final String PASS = "luyang";
 
     public static final Logger logger = Logger.getLogger( Author.class.getName() );
+    public static javax.swing.JFrame frame = new javax.swing.JFrame("author_welcome");
+    private javax.swing.JPanel Welcome_Part;
+    private javax.swing.JLabel Welcome;
+    private javax.swing.JButton signoutButton;
+    private javax.swing.JButton submitNewButton;
+    private javax.swing.JButton checkStausButton;
+    private javax.swing.JPanel OpSection;
+    private javax.swing.JPanel Author;
+    private javax.swing.JScrollPane statusScroll;
+    private javax.swing.JButton retractButton;
+    private javax.swing.JComboBox retractBox;
+
+    private static Statement stmt = null;
+    private static Connection conn = null;
+    public final static String QUERY = "SELECT idManuscript, title FROM Manuscript WHERE idAuthor =";
+
+    private static List<String> titles;
+    private static List<Integer> ids;
+    public static int authorID;
+
+
 
     public static void main(String[] args) {
-        javax.swing.JFrame frame = new javax.swing.JFrame("author_welcome");
-        frame.setContentPane(new Author(0).author);
+        JFrame frame = new JFrame("Author");
+        frame.setContentPane(new Author().Author);
         frame.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
 
     }
 
-    private javax.swing.JPanel author;
-    private javax.swing.JButton statusButton;
-    private javax.swing.JButton submitButton;
-    private javax.swing.JScrollPane statusScroll;
-    private javax.swing.JLabel welcome;
 
+
+    public Author(){
+
+    }
 
     public Author(int idAuthor){
 
-//        javax.swing.JFrame frame = new javax.swing.JFrame("author_welcome");
-//        frame.setContentPane(author);
-//        frame.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
-//        frame.pack();
-//        frame.setVisible(true);
+        frame = new JFrame("Author");
+        frame.setContentPane(Author);
+        frame.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
+        frame.setLocation(400, 0);
 
-        //idAuthor = 1;
+        authorID = idAuthor;
         String name = getAuthorName(idAuthor);
-        welcome.setText("Welcome! " + name);
+        Welcome.setText("Welcome! " + name);
 
-        JTable myTable = createTable();
+        JTable myTable = createTable(idAuthor);
         statusScroll.setViewportView(myTable);
 
-        statusButton.addActionListener(new ActionListener() {
+        checkStausButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                getManuStatus();
+                getManuStatus(idAuthor);
             }
         });
 
-        submitButton.addActionListener(new ActionListener() {
+        submitNewButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                new submit(idAuthor);
+            }
+        });
+        signoutButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(java.awt.event.ActionEvent e) {
+                try {
+                    stmt.close();
+                    conn.close();
+                } catch (SQLException e1) {
+                    e1.printStackTrace();
+                }
+                frame.dispose();
+                new Login();
+            }
+        });
 
+        ResultSet res  = null;
+        try {
+            res = stmt.executeQuery(QUERY + idAuthor);
+
+            // iterate through results
+            titles = new ArrayList<>();
+            ids = new ArrayList<>();
+            while(res.next()) {
+                ids.add(res.getInt(1));
+                titles.add(res.getString(2));
+                retractBox.addItem(res.getInt(1) + " " + res.getString(2));
+            }
+        }catch(java.sql.SQLException e){
+            e.printStackTrace();
+        }
+
+
+
+
+        retractButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(java.awt.event.ActionEvent e) {
+                JOptionPane.showConfirmDialog(frame,
+                        "Are you sure to retract this manuscript" + retractBox.getSelectedItem() + "?");
+                int id = getManuId((String)retractBox.getSelectedItem());
+                retractManu(id);
             }
         });
 
     }
 
+    public void retractManu(int id){
+        ResultSet res  = null;
+        try {
+            String sql = "DELETE from Manuscript where idManuscript = ?";
+            PreparedStatement preparedStmt = conn.prepareStatement(sql);
+            preparedStmt.setInt(1, id);
+
+            // execute the preparedstatement
+            preparedStmt.execute();
+            JTable myTable = createTable(authorID);
+            statusScroll.setViewportView(myTable);
+
+        }catch (Exception e){
+            logger.log(Level.SEVERE, "Exception in retract Manu!");
+            e.printStackTrace();
+        }
+    }
+
+    public static JTable createTable(int idAuthor){
 
 
-    public static JTable createTable(){
-
-
-        Statement stmt = null;
-        Connection conn = null;
         DefaultTableModel dtm = new DefaultTableModel();
-        int idAuthor = 1;
+
         try {
             conn = DriverManager.getConnection(DB_URL,USER,PASS);
             stmt = conn.createStatement();
@@ -89,13 +166,12 @@ public class Author {
         return table;
     }
 
-    public static JTable createTable2(){
+    public static JTable createTable2(int idAuthor){
 
 
         Statement stmt = null;
         Connection conn = null;
         DefaultTableModel dtm = new DefaultTableModel();
-        int idAuthor = 1;
         try {
             conn = DriverManager.getConnection(DB_URL,USER,PASS);
             stmt = conn.createStatement();
@@ -140,8 +216,7 @@ public class Author {
     }
 
     public String getAuthorName(int idAuthor){
-        Statement stmt = null;
-        Connection conn = null;
+
         String ret = null;
         try {
             conn = DriverManager.getConnection(DB_URL,USER,PASS);
@@ -153,7 +228,7 @@ public class Author {
                 String firstName = rs.getString("authorFirstName");
                 String lastName  = rs.getString("authorLastName");
                 String addr = rs.getString("mailAddress");
-                ret = firstName + lastName + " From " + addr;
+                ret = firstName +" "+ lastName ;
             }
 
         }catch (Exception e){
@@ -163,9 +238,14 @@ public class Author {
         return ret;
     }
 
-    public void getManuStatus() {
-        JTable myTable = createTable2();
+    public void getManuStatus(int idAuthor) {
+        JTable myTable = createTable2(idAuthor);
         statusScroll.setViewportView(myTable);
+    }
+
+    public int getManuId(String s){
+        String[] array = s.split("\\s+");
+        return Integer.parseInt(array[0]);
     }
 
 

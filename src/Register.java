@@ -142,7 +142,7 @@ public class Register {
                             rst.next();
                             last_inserted_id = rst.getInt(1);
 //                            System.out.print("last id: " + last_inserted_id);
-                            JOptionPane.showConfirmDialog(frame,
+                            JOptionPane.showMessageDialog(frame,
                                     "Your userid is " + last_inserted_id);
                             // cleanup
                             break;
@@ -163,7 +163,7 @@ public class Register {
                             rst.next();
                             last_inserted_id = rst.getInt(1);
 //                            System.out.print("last id: " + last_inserted_id);
-                            JOptionPane.showConfirmDialog(frame,
+                            JOptionPane.showMessageDialog(frame,
                                     "Your userid is " + last_inserted_id);
                             break;
                         case "Reviewer":
@@ -205,7 +205,7 @@ public class Register {
                                 }
 
                             insert_table.executeUpdate();
-                            JOptionPane.showConfirmDialog(frame,
+                            JOptionPane.showMessageDialog(frame,
                                     "Your userid is " + last_inserted_id);
                             break;
                         default:
