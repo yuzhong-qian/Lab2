@@ -167,14 +167,41 @@ public class Editor {
                 String change_status = (String) Status_Change_Select.getSelectedItem();
                 String update;
                 int pages = 0;
+
+                String temp = "SELECT `status` FROM Manuscript WHERE `idManuscript` = " + manuid;
+                String currtent_status = "";
+                try {
+                    rst = stmt.executeQuery(temp);
+                    while (rst.next())
+                        currtent_status = rst.getString(1);
+                } catch (SQLException e1) {
+                    e1.printStackTrace();
+                }
+
                 switch (change_status) {
                     case "Rejected":
+                        if(currtent_status.equals("Scheduled for publication") || currtent_status.equals("Published")) {
+                            JOptionPane.showMessageDialog(frame, "You cannot reject this manuscript at this status!");
+                            return;
+                        }
                         update = "UPDATE Manuscript SET `status` = '" + change_status + "' WHERE idManuscript = " + manuid;
                         break;
                     case "Accepted":
+                        if(currtent_status.equals("In typesetting") || currtent_status.equals("Scheduled for publication") || currtent_status.equals("Published")) {
+                            JOptionPane.showMessageDialog(frame, "This manuscript has already been accepted!");
+                            return;
+                        }
+                        if(currtent_status.equals("Submitted")) {
+                            JOptionPane.showMessageDialog(frame, "This manuscript should be first assign to reviewers to review!");
+                            return;
+                        }
                         update = "UPDATE Manuscript SET `status` = '" + change_status + "' WHERE idManuscript = " + manuid;
                         break;
                     case "In typesetting":
+                        if(!currtent_status.equals("Accepted")) {
+                            JOptionPane.showMessageDialog(frame, "This manuscript cannot be typeset! Only the manuscript with accepted status can be typeset!");
+                            return;
+                        }
                         String s = Pages_text.getText();
                         if(!isNumeric(s)) {
                             JOptionPane.showMessageDialog(frame, "Invaild page number!");
@@ -185,9 +212,22 @@ public class Editor {
                             JOptionPane.showMessageDialog(frame, "Too few or too many page number!");
                             return;
                         }
+
                         update = "UPDATE Manuscript SET `status` = '" + change_status + "', `typesetPages` = " + pages + " WHERE `idManuscript` = " + manuid;
                         break;
                     case "Scheduled for publication":
+                        if(currtent_status.equals("Scheduled for publication")) {
+                            JOptionPane.showMessageDialog(frame, "This manuscript has already been typesetting!");
+                            return;
+                        }
+                        if(currtent_status.equals("Published")) {
+                            JOptionPane.showMessageDialog(frame, "This manuscript has already been published!");
+                            return;
+                        }
+                        if(!currtent_status.equals("In typesetting")) {
+                            JOptionPane.showMessageDialog(frame, "This manuscript should be typesetting first!");
+                            return;
+                        }
                         update = "UPDATE Manuscript SET `status` = '" + change_status + "' WHERE idManuscript = " + manuid + ";";
                         String getPage = "SELECT `typesetPages` FROM Manuscript WHERE `idManuscript` = " + manuid;
 
@@ -334,12 +374,12 @@ public class Editor {
 
         String sql = null;
         if(status.equals("ALL"))
-            sql = "SELECT `idManuscript`,`title`,`date`,`status`,`authorList`,`typesetPages` FROM Manuscript ORDER BY FIELD(`status`, " +
+            sql = "SELECT `idManuscript`,`title`,`code`, `date`,`status`,`authorList`,`typesetPages` FROM Manuscript ORDER BY FIELD(`status`, " +
                     "'Submitted', 'Under review', 'Rejected', 'Accepted', 'In typesetting', 'Scheduled for publication', 'Published')" ;
         else if(status.equals("Search"))
             sql = constructSql();
         else
-            sql = "SELECT `idManuscript`,`title`,`date`,`status`,`authorList`,`typesetPages` FROM Manuscript WHERE `status` = '" + status + "' ORDER BY FIELD(`status`, " +
+            sql = "SELECT `idManuscript`,`title`, `code`, `date`,`status`,`authorList`,`typesetPages` FROM Manuscript WHERE `status` = '" + status + "' ORDER BY FIELD(`status`, " +
                     "'Submitted', 'Under review', 'Rejected', 'Accepted', 'In typesetting', 'Scheduled for publication', 'Published')" ;
         DefaultTableModel dtm = buildTableModel(stmt, sql);
 
@@ -398,10 +438,10 @@ public class Editor {
         core_part = core_part.substring(0, core_part.length() - 2);
         String status = (String)Status_Select.getSelectedItem();
         if(status.equals("ALL")) {
-            sql = "SELECT `idManuscript`,`title`,`date`,`status`,`authorList`,`typesetPages` FROM Manuscript WHERE " + core_part + " ORDER BY FIELD(`status`, " +
+            sql = "SELECT `idManuscript`,`title`,`code`, `date`,`status`,`authorList`,`typesetPages` FROM Manuscript WHERE " + core_part + " ORDER BY FIELD(`status`, " +
                     "'Submitted', 'Under review', 'Rejected', 'Accepted', 'In typesetting', 'Scheduled for publication', 'Published')" ;
         } else {
-            sql = "SELECT `idManuscript`,`title`,`date`,`status`,`authorList`,`typesetPages` FROM Manuscript WHERE " + core_part + " AND `status` = '" + status + "' ORDER BY FIELD(`status`, " +
+            sql = "SELECT `idManuscript`,`title`,`code`,`date`,`status`,`authorList`,`typesetPages` FROM Manuscript WHERE " + core_part + " AND `status` = '" + status + "' ORDER BY FIELD(`status`, " +
                     "'Submitted', 'Under review', 'Rejected', 'Accepted', 'In typesetting', 'Scheduled for publication', 'Published')" ;
         }
 

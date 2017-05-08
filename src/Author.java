@@ -85,7 +85,7 @@ public class Author {
         submitNewButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new submit(idAuthor);
+                new submit(idAuthor, name);
 
             }
         });
@@ -126,12 +126,30 @@ public class Author {
         retractButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(java.awt.event.ActionEvent e) {
-                JOptionPane.showConfirmDialog(frame,
-                        "Are you sure to retract this manuscript" + retractBox.getSelectedItem() + "?");
                 int id = getManuId((String)retractBox.getSelectedItem());
-                retractManu(id);
-                getManuBox(idAuthor);
+                String jurge = "SELECT `status` FROM Manuscript WHERE `idManuscript` = " + id;
+                ResultSet res = null;
+                try {
+                    res = stmt.executeQuery(jurge);
+                    String status = "";
+                    while (res.next())
+                        status = res.getString(1);
+                    if(status.equals("Scheduled for publication") || status.equals("Published")) {
+                        JOptionPane.showMessageDialog(frame,
+                                "You cannot retract your manuscript at this status!");
+                        return;
+                    }
+                } catch (SQLException e1) {
+                    e1.printStackTrace();
+                }
 
+                int flag = JOptionPane.showConfirmDialog(frame,
+                        "Are you sure to retract this manuscript" + retractBox.getSelectedItem() + "?");
+
+                if(flag == 0) {
+                    retractManu(id);
+                    getManuBox(idAuthor);
+                }
             }
         });
 
@@ -162,7 +180,7 @@ public class Author {
 
         try {
             stmt = conn.createStatement();
-            String sql = "SELECT title,idManuscript,date FROM Manuscript WHERE idAuthor=" + idAuthor ;
+            String sql = "SELECT title, idManuscript, authorList, code, status, date, typesetPages FROM Manuscript WHERE idAuthor=" + idAuthor ;
             dtm = buildTableModel(stmt, sql);
 
         }catch (Exception e){
@@ -183,7 +201,7 @@ public class Author {
         DefaultTableModel dtm = new DefaultTableModel();
         try {
             stmt = conn.createStatement();
-            String sql = "SELECT title,idManuscript,status FROM Manuscript WHERE idAuthor=" + idAuthor ;
+            String sql = "SELECT title, idManuscript, authorList, code, status, date, typesetPages FROM Manuscript WHERE idAuthor=" + idAuthor ;
             dtm = buildTableModel(stmt, sql);
 
         }catch (Exception e){
@@ -252,7 +270,7 @@ public class Author {
 
     public int getManuId(String s){
         String[] array = s.split("\\s+");
-        return Integer.parseInt(array[0]);
+        return Integer.parseInt(array[1].substring(0, array[1].length() - 1));
     }
 
     public void getManuBox(int idAuthor){
@@ -267,14 +285,12 @@ public class Author {
             while(res.next()) {
                 ids.add(res.getInt(1));
                 titles.add(res.getString(2));
-                String s =  res.getInt(1) + " " + res.getString(2) ;
+                String s = "ID: " + res.getInt(1) + ", " + res.getString(2) ;
 
                 String temp = s;
                 if (s.length()>20) {
-                    temp = s.substring(0,20) + "...";
+                    temp = s.substring(0,25) + "...";
                 }
-
-                System.out.print(temp);
 
                 retractBox.addItem( temp);
             }

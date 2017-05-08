@@ -48,7 +48,7 @@ public class submit {
 //    }
     public submit(){}
 
-    public submit(int authorID) {
+    public submit(int authorID, String name) {
 
         frame.setContentPane(panel1);
         frame.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
@@ -101,7 +101,7 @@ public class submit {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int interestCode = getCode((String) RICodeBox.getSelectedItem());
-                setSubmitButton(authorID, interestCode);
+                setSubmitButton(authorID, interestCode, name);
             }
         });
 
@@ -115,7 +115,7 @@ public class submit {
 
     }
 
-    public void setSubmitButton(int authorId, int interestCode){
+    public void setSubmitButton(int authorId, int interestCode, String name){
         String insert = "INSERT Manuscript (`title`, `date`,`status`,`authorList`,`content`, `typesetPages`, `idAuthor`, `idEditor`, `code`) VALUES"
                 + " (?, ?, ?, ?, ?, ?, ?, ?, ?);";
         PreparedStatement submit_table = null;
@@ -130,7 +130,7 @@ public class submit {
             Timestamp timeStamp = new Timestamp(date.getTime());
             submit_table.setTimestamp(2, timeStamp);
             submit_table.setString(3, "Submitted");
-            submit_table.setString(4, getAuthorList());
+            submit_table.setString(4, getAuthorList(name));
             try {
                 if (selectedFile==null) {
                     JOptionPane.showMessageDialog(frame, "You should select your file!");
@@ -162,16 +162,16 @@ public class submit {
         }
     }
 
-    public String getAuthorList(){
-        String res = "";
+    public String getAuthorList(String name){
+        String res = name;
         if (!Author2.getText().equals("") ){
-            res += Author2.getText() + ", ";
+            res += ", " +  Author2.getText();
         }
         if (!Author3.getText().equals("")) {
-            res += Author3.getText() + ", ";
+            res += ", " + Author3.getText() ;
         }
         if (!Author4.getText().equals("")) {
-            res += Author4.getText();
+            res += ", " + Author4.getText();
         }
         return res;
     }

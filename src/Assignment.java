@@ -142,28 +142,49 @@ public class Assignment {
                         return;
                     }
 
+//                    String select = "SELECT `idReviewer` FROM InterestList WHERE `code` = " + code_int;
                     String select = "SELECT `idReviewer` FROM InterestList WHERE `code` = " + code_int;
+                    String already = "SELECT `idReviewer` FROM Assignment WHERE `idManuscript` = " + manuid;
                     String interest = "SELECT `interest` FROM RICodes WHERE `code` = " + code_int;
+
+                    rst = stmt.executeQuery(already);
+                    Set<Integer> already_assign = new HashSet<Integer>();
+                    while (rst.next())
+                        already_assign.add(rst.getInt(1));
+
                     rst = stmt.executeQuery(select);
                     available_reviewer_numbers = 0;
                     List<Integer> available_reviewer_list = new ArrayList<>();
                     while (rst.next()) {
                         available_reviewer_numbers++;
-                        available_reviewer_list.add(rst.getInt(1));
+                        if(already_assign.add(rst.getInt(1)))
+                            available_reviewer_list.add(rst.getInt(1));
                     }
 
                     rst = stmt.executeQuery(interest);
                     while (rst.next()) {
                         interest = rst.getString(1);
                     }
+
+
                     if(available_reviewer_numbers < 3) {
+                        Reviewer_List.setVisible(false);
+                        Add_Reviewer_btn.setVisible(false);
+                        Assign_btn.setVisible(false);
                         JOptionPane.showMessageDialog(frame, "Not enough reviewers have interest filed in " + interest + "!");
+
                         return;
                     }
 
                     Reviewer_List.setVisible(true);
                     Add_Reviewer_btn.setVisible(true);
                     Assign_btn.setVisible(true);
+                    Reviewer_1_Select.removeAllItems();
+                    Reviewer_2_Select.removeAllItems();
+                    Reviewer_3_Select.removeAllItems();
+                    Reviewer_1_Select.addItem("-");
+                    Reviewer_2_Select.addItem("-");
+                    Reviewer_3_Select.addItem("-");
 
                     for(int i: available_reviewer_list) {
                         select = "SELECT `idReviewer`, `reviewerLastName`,`reviewerFirstName` FROM Reviewer WHERE `idReviewer` = " + i;
@@ -202,16 +223,30 @@ public class Assignment {
         Assign_btn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                String manuid = Manuscript_ID_text.getText();
+                String numberReviews = "SELECT COUNT(*) FROM Assignment WHERE `idManuscript` = " + manuid;
+                int need_number = 0;
+                try {
+                    rst = stmt.executeQuery(numberReviews);
+                    while (rst.next()) {
+                        need_number = 3 - rst.getInt(1);
+                    }
+                } catch (SQLException e1) {
+                    e1.printStackTrace();
+                }
+
+
                 Set<String> set = new HashSet<String>();
                 for(JComboBox jb: reviewers)
-                    set.add((String) jb.getSelectedItem());
+                    if(!((String) jb.getSelectedItem()).equals("-"))
+                        set.add((String) jb.getSelectedItem());
 
-                if(set.size() < 3) {
-                    JOptionPane.showMessageDialog(frame, "You must select three different reviewers!");
+                if(set.size() < need_number) {
+                    JOptionPane.showMessageDialog(frame, "You must select enough different reviewers!");
                     return;
                 }
                 String timeStamp = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime());
-                String message = "Manuscript" +  Manuscript_ID_text.getText() + "has been assign to Reviewers ";
+                String message = "Manuscript " +  Manuscript_ID_text.getText() + " has been assign to Reviewers ";
                 for(String s: set) {
                     String[] array = s.split("\\s+");
                     String insert = "INSERT INTO Assignment (`idManuscript`,`idReviewer`,`assignDate`) VALUES (" +
@@ -224,7 +259,7 @@ public class Assignment {
                         e1.printStackTrace();
                     }
                 }
-                String update = "UPDATE Manuscript SET `status` = 'Under review' WHERE `idmManuscript` = " + Manuscript_ID_text.getText();
+                String update = "UPDATE Manuscript SET `status` = 'Under review' WHERE `idManuscript` = " + Manuscript_ID_text.getText();
                 try {
                     stmt.execute(update);
                 } catch (SQLException e1) {
