@@ -51,7 +51,7 @@ public class submit {
     public submit(int authorID, String name) {
 
         frame.setContentPane(panel1);
-        frame.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
 
