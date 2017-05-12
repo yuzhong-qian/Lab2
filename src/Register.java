@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.security.*;
 
 /**
  * Created by qianyuzhong on 4/29/17.
@@ -33,6 +34,8 @@ public class Register {
     private JLabel Interest3;
     private JTextField affiliation_text;
     private JLabel Affiliation;
+    private javax.swing.JPasswordField passwordField1;
+    private javax.swing.JPasswordField passwordField2;
 
     private Connection con = null;
     private Statement stmt = null;
@@ -122,91 +125,125 @@ public class Register {
             public void actionPerformed(ActionEvent e) {
                 String s = (String) user_type.getSelectedItem();//get the selected item
                 String insert = null;
+                String signUp = null;
                 String id = null;
                 int last_inserted_id = 0;
                 PreparedStatement insert_table = null;
+                PreparedStatement signUp_table = null;
                 Statement find_id = null;
 //                Statement
+
                 try {
                     switch (s) {//check for a match
                         case "Editor":
-                            insert = "INSERT INTO Editor (`editorLastName`,`editorFirstName`) VALUES (?, ?)";
-                            insert_table = con.prepareStatement(insert);
-                            find_id = con.createStatement();
-                            insert_table.setString(1, last_name_text.getText());
-                            insert_table.setString(2, first_name_text.getText());
+                            if(checkInput()) {
 
-                            insert_table.executeUpdate();
-                            id = "SELECT MAX(`idEditor`) FROM Editor";
-                            rst = find_id.executeQuery(id);
-                            rst.next();
-                            last_inserted_id = rst.getInt(1);
+                                insert = "INSERT INTO Editor (`editorLastName`,`editorFirstName`) VALUES (?, ?)";
+                                insert_table = con.prepareStatement(insert);
+                                find_id = con.createStatement();
+                                insert_table.setString(1, last_name_text.getText());
+                                insert_table.setString(2, first_name_text.getText());
+                                insert_table.executeUpdate();
+
+
+                                id = "SELECT MAX(`idEditor`) FROM Editor";
+                                rst = find_id.executeQuery(id);
+                                rst.next();
+                                last_inserted_id = rst.getInt(1);
 //                            System.out.print("last id: " + last_inserted_id);
-                            JOptionPane.showMessageDialog(frame,
-                                    "Your userid is " + last_inserted_id);
-                            // cleanup
+
+                                signUp = "INSERT INTO Credential(`usertype`, `userid`, `password`) VALUES(?, ?, ?)";
+                                signUp_table = con.prepareStatement(signUp);
+                                signUp_table.setString(1, "Editor");
+                                signUp_table.setInt(2, last_inserted_id);
+                                signUp_table.setString(3, securePassword(String.valueOf(passwordField1.getPassword())));
+                                signUp_table.executeUpdate();
+
+                                JOptionPane.showMessageDialog(frame,
+                                        "Your userid is " + last_inserted_id);
+                                // cleanup
+                            }
                             break;
                         case "Author":
-                            insert = "INSERT INTO Author (`authorLastName`,`authorFirstName`, `mailAddress`,`emailAddress`,`affliation`" +
-                                    ") VALUES (?, ?, ?, ?, ?)";
-                            insert_table = con.prepareStatement(insert);
-                            find_id = con.createStatement();
-                            insert_table.setString(1, last_name_text.getText());
-                            insert_table.setString(2, first_name_text.getText());
-                            insert_table.setString(3, mailaddress_text.getText());
-                            insert_table.setString(4, emailAddress_text.getText());
-                            insert_table.setString(5, affiliation_text.getText());
+                            if(checkInput() && checkOtherInfo()) {
+                                insert = "INSERT INTO Author (`authorLastName`,`authorFirstName`, `mailAddress`,`emailAddress`,`affliation`" +
+                                        ") VALUES (?, ?, ?, ?, ?)";
+                                insert_table = con.prepareStatement(insert);
+                                find_id = con.createStatement();
+                                insert_table.setString(1, last_name_text.getText());
+                                insert_table.setString(2, first_name_text.getText());
+                                insert_table.setString(3, mailaddress_text.getText());
+                                insert_table.setString(4, emailAddress_text.getText());
+                                insert_table.setString(5, affiliation_text.getText());
 
-                            insert_table.executeUpdate();
-                            id = "SELECT MAX(`idAuthor`) FROM Author";
-                            rst = find_id.executeQuery(id);
-                            rst.next();
-                            last_inserted_id = rst.getInt(1);
+                                insert_table.executeUpdate();
+                                id = "SELECT MAX(`idAuthor`) FROM Author";
+                                rst = find_id.executeQuery(id);
+                                rst.next();
+                                last_inserted_id = rst.getInt(1);
 //                            System.out.print("last id: " + last_inserted_id);
-                            JOptionPane.showMessageDialog(frame,
-                                    "Your userid is " + last_inserted_id);
-                            break;
+
+
+                                signUp = "INSERT INTO Credential(`usertype`, `userid`, `password`) VALUES(?, ?, ?)";
+                                signUp_table = con.prepareStatement(signUp);
+                                signUp_table.setString(1, "Author");
+                                signUp_table.setInt(2, last_inserted_id);
+                                signUp_table.setString(3, securePassword(String.valueOf(passwordField1.getPassword())));
+                                signUp_table.executeUpdate();
+                                JOptionPane.showMessageDialog(frame,
+                                        "Your userid is " + last_inserted_id);
+                            }break;
                         case "Reviewer":
-                            insert = "INSERT INTO Reviewer (`reviewerLastName`,`reviewerFirstName`,`emailAddress`,`affliation`" +
-                                    ") VALUES (?, ?, ?, ?)";
-                            insert_table = con.prepareStatement(insert);
-                            find_id = con.createStatement();
-                            insert_table.setString(1, last_name_text.getText());
-                            insert_table.setString(2, first_name_text.getText());
-                            insert_table.setString(3, emailAddress_text.getText());
-                            insert_table.setString(4, affiliation_text.getText());
+                            if(checkInput() && checkOtherInfo()) {
+                                insert = "INSERT INTO Reviewer (`reviewerLastName`,`reviewerFirstName`,`emailAddress`,`affliation`" +
+                                        ") VALUES (?, ?, ?, ?)";
+                                insert_table = con.prepareStatement(insert);
+                                find_id = con.createStatement();
+                                insert_table.setString(1, last_name_text.getText());
+                                insert_table.setString(2, first_name_text.getText());
+                                insert_table.setString(3, emailAddress_text.getText());
+                                insert_table.setString(4, affiliation_text.getText());
 
-                            insert_table.executeUpdate();
+                                insert_table.executeUpdate();
 
-                            String[] reviewer_interest = new String[3];
-                            reviewer_interest[0] = (String) Interest1_select.getSelectedItem();
-                            reviewer_interest[1] = (String) Interest2_select.getSelectedItem();
-                            reviewer_interest[2] = (String) Interest3_select.getSelectedItem();
+                                String[] reviewer_interest = new String[3];
+                                reviewer_interest[0] = (String) Interest1_select.getSelectedItem();
+                                reviewer_interest[1] = (String) Interest2_select.getSelectedItem();
+                                reviewer_interest[2] = (String) Interest3_select.getSelectedItem();
 
-                            id = "SELECT MAX(`idReviewer`) FROM Reviewer";
-                            rst = find_id.executeQuery(id);
-                            rst.next();
-                            last_inserted_id = rst.getInt(1);
+                                id = "SELECT MAX(`idReviewer`) FROM Reviewer";
+                                rst = find_id.executeQuery(id);
+                                rst.next();
+                                last_inserted_id = rst.getInt(1);
 //                            System.out.print("last id: " + last_inserted_id);
 
-                            insert = "INSERT INTO InterestList (`code`,`idReviewer`) VALUES ";
+                                insert = "INSERT INTO InterestList (`code`,`idReviewer`) VALUES ";
 
-                            for(String temp: reviewer_interest)
-                                if(!temp.equals("-"))
-                                    insert = insert + "(?, ?),";
-                            insert = insert.substring(0, insert.length() - 1);
+                                for (String temp : reviewer_interest)
+                                    if (!temp.equals("-"))
+                                        insert = insert + "(?, ?),";
+                                insert = insert.substring(0, insert.length() - 1);
 //                            System.out.print(insert);
-                            insert_table = con.prepareStatement(insert);
-                            int count = 1;
-                            for(String temp: reviewer_interest)
-                                if(!temp.equals("-")) {
-                                    insert_table.setInt(count++, getCode(temp));
-                                    insert_table.setInt(count++, last_inserted_id);
-                                }
+                                insert_table = con.prepareStatement(insert);
+                                int count = 1;
+                                for (String temp : reviewer_interest)
+                                    if (!temp.equals("-")) {
+                                        insert_table.setInt(count++, getCode(temp));
+                                        insert_table.setInt(count++, last_inserted_id);
+                                    }
 
-                            insert_table.executeUpdate();
-                            JOptionPane.showMessageDialog(frame,
-                                    "Your userid is " + last_inserted_id);
+                                insert_table.executeUpdate();
+
+
+                                signUp = "INSERT INTO Credential(`usertype`, `userid`, `password`) VALUES(?, ?, ?)";
+                                signUp_table = con.prepareStatement(signUp);
+                                signUp_table.setString(1, "Reviewer");
+                                signUp_table.setInt(2, last_inserted_id);
+                                signUp_table.setString(3, securePassword(String.valueOf(passwordField1.getPassword())));
+                                signUp_table.executeUpdate();
+                                JOptionPane.showMessageDialog(frame,
+                                        "Your userid is " + last_inserted_id);
+                            }
                             break;
                         default:
                             frame.setSize(new Dimension(250, 200));
@@ -242,6 +279,7 @@ public class Register {
                     case "Author":
                         frame.setSize(new Dimension(250, 300));
                         Other_info.setVisible(true);
+                        Interest.setVisible(false);
                         break;
                     case "Reviewer":
                         frame.setSize(new Dimension(450, 400));
@@ -294,9 +332,67 @@ public class Register {
             }
         });
     }
+    private boolean checkPassword(char[] s1, char[] s2){
+        int len = s1.length;
+        if (len == 0 || s1.length != s2.length) {return false;}
+        for (int i = 0; i < len; i++){
+            if(s1[i] != s2[i]){return false;}
+        }
+        return true;
+    }
+
+
 
     private int getCode(String s) {
         String[] array = s.split("\\s+");
         return Integer.parseInt(array[0]);
+    }
+    private boolean checkInput(){
+        if (last_name_text.getText().equals("")){
+            JOptionPane.showMessageDialog(frame,
+                    "You missed the last name!");
+            return false;
+        }
+        if (first_name_text.getText().equals("")){
+            JOptionPane.showMessageDialog(frame,
+                    "You missed the first name!");
+            return false;
+        }
+        if (!checkPassword(passwordField1.getPassword(), passwordField2.getPassword())){
+            JOptionPane.showMessageDialog(frame,
+                    "Your passwords are not the same!");
+            return false;
+        }
+        return true;
+    }
+    private boolean checkOtherInfo(){
+        if (mailaddress_text.getText().equals("")){
+            JOptionPane.showMessageDialog(frame,
+                    "You missed the mail address!");
+            return false;
+        }
+        if (emailAddress_text.getText().equals("")){
+            JOptionPane.showMessageDialog(frame,
+                    "You missed the Email address!");
+            return false;
+        }
+
+        return true;
+    }
+    private String securePassword(String passwordToHash){
+        String generatedPassword = null;
+        try{
+            MessageDigest md = MessageDigest.getInstance("MD5");
+            md.update(passwordToHash.getBytes());
+            byte[] bytes = md.digest();
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < bytes.length; i++){
+                sb.append(Integer.toString((bytes[i]&0xff) + 0x100, 16).substring(1));
+            }
+            generatedPassword = sb.toString();
+        }catch (NoSuchAlgorithmException e){
+            e.printStackTrace();
+        }
+        return generatedPassword;
     }
 }
