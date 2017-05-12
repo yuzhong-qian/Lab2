@@ -252,6 +252,20 @@ CREATE TABLE IF NOT EXISTS `cuteqian_db`.`InterestList` (
     ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
+
+
+-- -----------------------------------------------------
+-- Table `cuteqian_db`.`Credential`
+-- -----------------------------------------------------
+
+DROP TABLE IF EXISTS `cuteqian_db`.`Credential` CASCADE;
+CREATE TABLE IF NOT EXISTS `cuteqian_db`.`Credential` (
+   `usertype` ENUM('Author', 'Editor', 'Reviewer') NOT NULL,
+   `userid` INT NOT NULL,
+   `password` VARCHAR(200) NOT NULL,
+   PRIMARY KEY (`usertype`, `userid`))
+ENGINE = InnoDB;
+
 DROP TRIGGER IF EXISTS valid_publication_period;
 DROP TRIGGER IF EXISTS max_number_interests;
 DROP TRIGGER IF EXISTS valid_manuscript;
